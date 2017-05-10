@@ -27,12 +27,10 @@ export const findProducts = (name) => {
 			// metadata is data that describes data
 			// our 'header' also provides authentications
 				// pending, full-filled, or rejected
-
-		// `` = backticks
 		// this fetch returns a promise
 		fetch(`https://api.uber.com/v1.2/estimates/price?start_latitude=${startLatitude}&start_longitude=${startLongitude}&end_latitude=${endLatitude}&end_longitude=${endLongitude}`, {
 			method: 'GET',
-			headers, // same thing as 'headers: headers'
+			headers,
 		})
 		.then((data) => data.json())
 		.then(({prices}) => {
@@ -44,9 +42,4 @@ export const findProducts = (name) => {
 			browserHistory.push(`/products/${name}`)
 		})
 	}
-
-	// return ({
-	// 	type: FIND_PRODUCTS,
-	// 	payload: name
-	// })
 }
