@@ -8,6 +8,9 @@ class App extends Component {
         <div className="App-header">
           <h2>Uber Price Estimation App</h2>
         </div>
+        <div className="App-childRoutes">
+        	{this.props.children}
+        </div>
       </div>
     );
   }
