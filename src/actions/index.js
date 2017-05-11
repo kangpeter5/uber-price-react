@@ -10,7 +10,7 @@ export const addLocation = (location) => ({
 const headers = {
 	'Authorization': 'Token giwaWhXqCRjlPltTiV0V8sbz_PMo1FecdpBbmiVy',
 	'Content-Type': 'application/json',
-	'Accept-Language': 'en_US'
+	'Accept_Language': 'en_EN'
 }
 
 // this works thanks to "thunk middleware"
@@ -27,7 +27,7 @@ export const findProducts = (name) => {
 			// our 'header' also provides authentications
 				// pending, full-filled, or rejected
 		// this fetch returns a promise
-		fetch(`https://api.uber.com/v1.2/estimates/price?start_latitude=${startLatitude}&start_longitude=${startLongitude}&end_latitude=${endLatitude}&end_longitude=${endLongitude}`, {
+		fetch(`https://api.uber.com/v1.2/estimates/price?start_latitude=${startLatitude}&start_longitude=${startLongitude}&end_latitude=${endLatitude}&end_longitude=${endLongitude}`,{
 			method: 'GET',
 			headers,
 		})
