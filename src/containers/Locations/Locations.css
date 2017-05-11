@@ -1,0 +1,26 @@
+.Location {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.Location-nameWrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.Location-name{
+	height: 30px;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	margin: 10px auto;
+}
+
+.Location-button {
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  width: 100px;
+  margin-left: 10px;
+}

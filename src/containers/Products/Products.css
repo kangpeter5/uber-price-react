@@ -1,0 +1,14 @@
+.Products-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Products-item {
+	display: flex;
+	width: 300px;
+	align-items: center;
+	justify-content: space-around;
+	border: 1px solid rgba(128, 128, 128, 0.3);
+}

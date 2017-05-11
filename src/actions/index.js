@@ -8,10 +8,9 @@ export const addLocation = (location) => ({
 })
 
 const headers = {
-	// 'Token YOUR_API_TOKEN_KEY'
 	'Authorization': 'Token giwaWhXqCRjlPltTiV0V8sbz_PMo1FecdpBbmiVy',
 	'Content-Type': 'application/json',
-	'Accept_Language': 'en_EN'
+	'Accept-Language': 'en_US'
 }
 
 // this works thanks to "thunk middleware"

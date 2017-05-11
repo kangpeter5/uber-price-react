@@ -26,31 +26,36 @@ class Locations extends Component {
 
 		return (
 			<div className="Location" >
-				<h2>Where are you?!</h2>
 				<div className="Location-nameWrapper">
 					<span>Enter you name</span>
 					<input className="Location-name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
-				</div>	
-				<AutoComplete 
-					style={styles}
-					onPlaceSelected={(place) => {
-						const startLatitude = place.geometry.location.lat();
-						const startLongitude = place.geometry.location.lng();
-						this.props.addLocationAction({ startLatitude, startLongitude })
-					}}
-					type={['address']}
-					componentRestrictions={{country: "us"}}
-				/>
-				<AutoComplete 
-					style={styles}
-					onPlaceSelected={(place) => {
-						const endLatitude = place.geometry.location.lat();
-						const endLongitude = place.geometry.location.lng();
-						this.props.addLocationAction({ endLatitude, endLongitude })
-					}}
-					type={['address']}
-					componentRestrictions={{country: 'us'}}
-				/>
+				</div>
+				<div className="Location-autoCompleteWrapper">
+					<span>Your Location</span>
+					<AutoComplete 
+						style={styles}
+						onPlaceSelected={(place) => {
+							const startLatitude = place.geometry.location.lat();
+							const startLongitude = place.geometry.location.lng();
+							this.props.addLocationAction({ startLatitude, startLongitude })
+						}}
+						type={['address']}
+						componentRestrictions={{country: "us"}}
+					/>
+				</div>
+				<div className="Location-autoCompleteWrapper">
+					<span>Your Destination</span>
+					<AutoComplete 
+						style={styles}
+						onPlaceSelected={(place) => {
+							const endLatitude = place.geometry.location.lat();
+							const endLongitude = place.geometry.location.lng();
+							this.props.addLocationAction({ endLatitude, endLongitude })
+						}}
+						type={['address']}
+						componentRestrictions={{country: 'us'}}
+					/>
+				</div>
 				<button className="Location-button" onClick={() => findProductsAction(this.state.name)}>Find Location</button>
 			</div>
 		)

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -8,17 +9,17 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 100px;
+  background: linear-gradient(to bottom, #4545f1, rgba(0, 0, 255, 0.15));
+  height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.App-childRoutes {
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.05));
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App-intro {
+  font-size: large;
 }
